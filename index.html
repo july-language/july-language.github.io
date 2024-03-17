@@ -8,21 +8,32 @@
     <body>
 
         <form action="https://july-language.github.io/">
-            <p>これがタイトル</p>
+            <p>パブリックなプライベート</p>
             <label for="inputText">インプットテキスト:</label>
             <label for="name">INPUT:</label>
             <input type="text" id="inputText" name="inputText">
 
-            <button type="button" onclick="displayText()">入力</button>
+            <button type="button" onclick="DisplayText()">入力</button>
             <button type="submit">送信</button>
                 <div id="result"></div>
-                
-			<script>
- 				 function displayText() {
-    			var inputText = document.getElementById("inputText").value;
-    			document.getElementById("result").innerHTML = inputText;
- 		 		}
-			</script>
+            
+            
+            <script>
+                 function Save() // 保存
+                 {
+                     const val = document.quarySelector(".txt").value;
+                     localStorae.setItem("data",val);
+                 }
+                 
+                 function Lead() // 読み出し
+                 {
+                     const display = document.getElementById("display");
+                     const data = localStorage.getItem("data");
+                     display.textContent = data;
+                 }
+                 
+            </script>
+            
         </form>
     </body>
 
