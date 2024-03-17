@@ -15,7 +15,14 @@
 
             <button type="button" onclick="displayText()">入力</button>
             <button type="submit">送信</button>
-            <div id="fullNameResult"></div>
+            <div id="result"></div>
         </form>
     </body>
+    <div id="result"></div>
+		<script>
+ 		 function displayText() {
+    	var inputText = document.getElementById("inputText").value;
+    	document.getElementById("result").innerHTML = inputText;
+ 		 }
+</script>
 </html>
